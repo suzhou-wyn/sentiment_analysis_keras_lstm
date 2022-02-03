@@ -1,0 +1,66 @@
+2022-02-03 22:02:53.461783: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2022-02-03 22:02:53.463587: W tensorflow/stream_executor/cuda/cuda_driver.cc:269] failed call to cuInit: UNKNOWN ERROR (303)
+2022-02-03 22:02:53.469745: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: DESKTOP-68P8VUG
+2022-02-03 22:02:53.470366: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: DESKTOP-68P8VUG
+2022-02-03 22:02:53.477816: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+embedding (Embedding)        (None, 63, 300)           15000000
+_________________________________________________________________
+bidirectional (Bidirectional (None, 63, 64)            85248
+_________________________________________________________________
+lstm_1 (LSTM)                (None, 16)                5184
+_________________________________________________________________
+dense (Dense)                (None, 1)                 17
+=================================================================
+Total params: 15,090,449
+Trainable params: 90,449
+Non-trainable params: 15,000,000
+_________________________________________________________________
+2022-02-03 22:02:54.700442: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/40
+760/760 [==============================] - 154s 196ms/step - loss: 0.2197 - accuracy: 0.9162 - val_loss: 0.1385 - val_accuracy: 0.9521
+
+Epoch 00001: val_loss improved from inf to 0.13849, saving model to .\weights.hdf5
+Epoch 2/40
+760/760 [==============================] - 146s 193ms/step - loss: 0.1311 - accuracy: 0.9554 - val_loss: 0.1201 - val_accuracy: 0.9617
+
+Epoch 00002: val_loss improved from 0.13849 to 0.12006, saving model to .\weights.hdf5
+Epoch 3/40
+760/760 [==============================] - 145s 190ms/step - loss: 0.1159 - accuracy: 0.9607 - val_loss: 0.1144 - val_accuracy: 0.9624
+
+Epoch 00003: val_loss improved from 0.12006 to 0.11444, saving model to .\weights.hdf5
+Epoch 4/40
+760/760 [==============================] - 145s 191ms/step - loss: 0.1087 - accuracy: 0.9631 - val_loss: 0.1124 - val_accuracy: 0.9638
+
+Epoch 00004: val_loss improved from 0.11444 to 0.11238, saving model to .\weights.hdf5
+Epoch 5/40
+760/760 [==============================] - 147s 194ms/step - loss: 0.1048 - accuracy: 0.9641 - val_loss: 0.1092 - val_accuracy: 0.9631
+
+Epoch 00005: val_loss improved from 0.11238 to 0.10915, saving model to .\weights.hdf5
+Epoch 6/40
+760/760 [==============================] - 150s 198ms/step - loss: 0.1004 - accuracy: 0.9656 - val_loss: 0.1093 - val_accuracy: 0.9636
+
+Epoch 00006: val_loss did not improve from 0.10915
+
+Epoch 00006: ReduceLROnPlateau reducing learning rate to 0.00010000000474974513.
+Epoch 7/40
+760/760 [==============================] - 151s 199ms/step - loss: 0.0926 - accuracy: 0.9674 - val_loss: 0.1104 - val_accuracy: 0.9639
+
+Epoch 00007: val_loss did not improve from 0.10915
+
+Epoch 00007: ReduceLROnPlateau reducing learning rate to 1.0000000474974514e-05.
+Epoch 8/40
+760/760 [==============================] - 149s 196ms/step - loss: 0.0911 - accuracy: 0.9676 - val_loss: 0.1099 - val_accuracy: 0.9637
+
+Epoch 00008: val_loss did not improve from 0.10915
+
+Epoch 00008: ReduceLROnPlateau reducing learning rate to 1e-05.
+Epoch 00008: early stopping
+Loss    : 0.1006
+Accuracy: 96.7081%
+
+Process finished with exit code 0
